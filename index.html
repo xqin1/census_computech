@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demographic Information By Geography</title>
+    <meta charset=utf-8 />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <meta name='apple-mobile-web-app-status-bar-style' content='black' /> 
+    <meta name='apple-mobile-web-app-capable' content='yes' />
+    <link rel='apple-touch-startup-image' href='img/ios-bg.png' />
+    <link rel='stylesheet' href='css/reset.css' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/style.css' type='text/css' media='screen, projection' />
+    
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/libs/excanvas.min.js"></script><![endif]-->
+  </head>
+<body>
+
+<div id='header'>
+  <div id="logo"><a href="http://www.computechinc.com"><img src="img/logo-computech.png" alt="Computech Inc Web site"></a></div>
+  <h1>Demographic Information by Geography</h1>
+  <form class='location-search'>
+    <input type='text' class='search'>
+    
+  </form>
+  
+</div>
+<div id="about">
+  <div id="tooltips">
+ 	<div id="about-heading">
+    <h2 id="title">About</h2>
+    <h3 id="subTitle" style="display: none;">Geography Type: <span>State</span></h3>
+    <a id="link-about" href="#void" style="display: none;">About</a>
+   </div>
+  <div id="about-body">    
+    <div id="introText"><p>This application displays a summary of demographic information for a selected geography.</p>
+<br>
+<p><strong>Instructions:</strong></p>
+<ol class="styled">
+<li>Select a Geography Type on the top left side of the map</li>
+<li>Hover over shaded geographies on the map to view a demographics summary</li>
+</ol>
+<br>
+<p class="datasource"><strong>Data Source:</strong><br>National Broadband Map (NBM) demographics data</p>
+</div>  
+    <div id="data-charts" style="display: none;">
+    	
+    <h4>Summary</h4>
+    <dl class="dl-inline width150">
+      <dt>Population:</dt>
+      <dd>2,323,212</dd>
+      <dt>Households:</dt>
+      <dd>865,000</dd>
+      <dt>Land Area (sq.mi):</dt>
+      <dd>23,400 sq. mi.</dd>
+      <dt>Pop Density:</dt>
+      <dd>345</dd>
+      <dt>Median Income:</dt>
+      <dd>$45,000</dd>
+    </dl>
+    <h4>Race</h4>
+    <div id="race" class="graph"></div>
+    <div id="race-legend" class="graph-legend">
+      
+    </div>
+    <h4>Age</h4>
+    <div id="age" class="graph"></div>
+    <div id="age-legend" class="graph-legend">
+      
+    </div>
+    <h4>Income</h4>
+    <div id="income" class="graph"></div>
+    <div id="income-legend" class="graph-legend">
+      
+    </div>
+    <h4>Education</h4>
+    <div class="hBarChart">
+      <dl>
+        <dt>HS Grad </dt>
+        <dd> <span class="hBar" style="background-color: #FF0; width: 92%">&nbsp;</span> <span class="hBarLabel">92%</span> </dd>
+        <dt>BS Degree or Greater </dt>
+        <dd> <span class="hBar" style="width: 40%; background-color:#FC9">&nbsp;</span> <span class="hBarLabel">40%</span> </dd>
+      </dl>
+    </div>
+    </div>
+  </div>
+	</div>
+	
+</div>
+<div id='map'></div>
+<div id='controls'>
+</div>
+<ul class='macro'>
+  <li class='population'><a id='state' class='active' href='#'>State</a></li>
+  <li class='population hispanic'><a id='county'  href='#'>County</a></li>
+   <li class='population hispanic'><a id='msa'  href='#'>Metropolitan Statistical Area</a></li>
+   <li class='population hispanic'><a id='tribal'  href='#'>Tribal</a></li>
+   <li class='population hispanic'><a id='congdist'  href='#'>Congressional District</a></li>
+</ul>
+
+<!-- Libraries -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  
+  <script language="javascript" type="text/javascript" src="js/libs/jquery.flot.min.js"></script>
+  <script language="javascript" type="text/javascript" src="js/libs/jquery.flot.pie.min.js"></script>
+
+<script src='js/libs/ender.min.js'></script>
+<script src='js/libs/modestmaps.min.js'></script>
+<script src='js/libs/easey.min.js'></script>
+<script src='js/libs/wax.mm.min.js'></script>
+<script src='js/libs/mustache.js'></script>
+
+<!-- Application code -->
+  <script language="javascript" type="text/javascript" src="js/charts.js"></script>
+<script src='js/app.js'></script>
+</body>
+</html>
